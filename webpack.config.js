@@ -29,7 +29,7 @@ module.exports = ({ development }) => ({
       },
       {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
-        type: 'asset/resource',
+        type: 'asset/images/resource',
       },
       {
         test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
