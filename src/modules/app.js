@@ -1,17 +1,18 @@
-import { JSBlock } from './js-block';
+import { Header } from './header';
 import { Timer } from './timer';
+import { JS_CREATION_DATE } from '../core/constans/settings';
 
 export default class App {
-  #jsBlock;
+  #header;
   #timer;
 
   constructor() {
-    this.#jsBlock = new JSBlock();
-    this.#timer = new Timer(new Date());
+    this.#header = new Header();
+    this.#timer = new Timer(JS_CREATION_DATE);
   }
   run() {
-    const jsBlockHTML = this.#jsBlock.render();
+    const header = this.#header.render();
     const timer = this.#timer.render();
-    document.body.append(jsBlockHTML, timer);
+    document.getElementById('root').append(header, timer);
   }
 }
